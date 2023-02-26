@@ -5,11 +5,11 @@ const Home = lazy(() => import('./pages/home'))
 const Users = lazy(() => import('./pages/users'))
 
 render(() => (
-  <Router>
+  <Router base="/">
     <Routes>
-      <Route path="/users" component={Users} />
-      <Route path="/" component={Home} />
-      <Route path="/about" element={<div>This site was made with Solid</div>} />
+      <Route path="users" component={Users} />
+      <Route path="" component={Home} />
+      <Route path="about" element={<div>This site was made with Solid</div>} />
     </Routes>
   </Router>  
 ), document.getElementById('root') as HTMLElement)
